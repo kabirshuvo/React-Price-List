@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './Components/NavBar/NavBar';
+import PriceList from './Components/priceList/PriceList';
 
 function App() {
 
@@ -9,6 +10,8 @@ function App() {
     <div>
       
       <NavBar></NavBar>
+
+      <PriceList></PriceList>
     </div>
   );
 }

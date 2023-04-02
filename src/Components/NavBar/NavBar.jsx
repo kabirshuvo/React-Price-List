@@ -1,4 +1,4 @@
-import { Bars4Icon, XCircleIcon } from '@heroicons/react/24/solid';
+import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import React, { useState } from 'react';
 import Link from '../links/Link';
 
@@ -15,10 +15,10 @@ const NavBar = () => {
         <nav >
             <div onClick={() => setOpen(!open)} className='md:hidden'>
             <span>{open === true ? 
-            <Bars4Icon className="h-6 w-6 text-blue-500" /> : <XCircleIcon className="h-6 w-6 text-blue-500" />}</span>
+             <XMarkIcon className="h-6 w-6 text-blue-500" />: <Bars4Icon className="h-6 w-6 text-blue-500" />}</span>
             </div>
 
-            <ul className={`md:flex ${open ? 'top-10': '-top-120'}`}>
+            <ul className={`md:flex absolute md:static duration-300 pl-4 bg-purple-700 text-white ${open ? 'top-6': '-top-32'}`}>
                 
 {
     routes.map(route => <Link key={route.id} route={route}> {route.name}</Link>)
